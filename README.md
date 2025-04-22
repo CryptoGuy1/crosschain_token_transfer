@@ -1,5 +1,3 @@
-Here's a polished, developer-friendly `README.md` for your cross-chain token transfer project using **Chainlink CCIP**, the **Transporter app**, and **Snowtrace** for verification.
-
 ---
 
 ```markdown
@@ -137,9 +135,3 @@ MIT © 2025
 
 ---
 
-Let me know if you’d like:
-- A version with deploy scripts or UI example
-- README badges (e.g., for Solidity version, license, testnet deployed, etc.)
-- A visual flow diagram of the transfer process
-
-You're building something powerful — and this README will make it shine!
