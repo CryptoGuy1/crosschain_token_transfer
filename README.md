@@ -1,3 +1,8 @@
+Here's a polished, developer-friendly `README.md` for your cross-chain token transfer project using **Chainlink CCIP**, the **Transporter app**, and **Snowtrace** for verification.
+
+---
+
+```markdown
 # 🚀 Cross-Chain USDC Transfer using Chainlink CCIP
 
 This project demonstrates how to perform cross-chain USDC token transfers from **Avalanche Fuji** to **Ethereum Sepolia** using [Chainlink CCIP (Cross-Chain Interoperability Protocol)](https://docs.chain.link/ccip), with integration support via the [Chainlink Transporter App](https://transporter.chain.link/) and [Snowtrace](https://testnet.snowtrace.io/) for transaction tracking.
@@ -47,74 +52,88 @@ A simple contract that:
 
 ```bash
 npm install
+```
 
-2. Compile Contracts
+### 2. **Compile Contracts**
+
+```bash
 npx hardhat compile
+```
 
-3. Deploy to Fuji
+### 3. **Deploy to Fuji**
+
 Ensure you have:
+- A funded wallet with Fuji AVAX + LINK
+- RPC URL and private key in `.env`
 
-A funded wallet with Fuji AVAX + LINK
-
-RPC URL and private key in .env
-
+```bash
 npx hardhat run scripts/deploy.js --network fuji
-4. Approve USDC to Contract
-Before calling transferUsdcToSepolia, approve the contract to transfer your USDC:
+```
 
-solidity
-Copy
-Edit
+### 4. **Approve USDC to Contract**
+
+Before calling `transferUsdcToSepolia`, approve the contract to transfer your USDC:
+
+```solidity
 usdcToken.approve(<contractAddress>, amount);
+```
+
 Or interact via Remix / frontend interface.
 
-5. Initiate Cross-Chain Transfer
+### 5. **Initiate Cross-Chain Transfer**
+
 Call:
 
-solidity
-Copy
-Edit
+```solidity
 transferUsdcToSepolia(receiver, amount)
-Ensure the contract has enough LINK to cover CCIP fees.
+```
 
-Track emitted UsdcTransferred events.
+- Ensure the contract has enough LINK to cover CCIP fees.
+- Track emitted `UsdcTransferred` events.
 
-🔍 Track the Transfer
-🔗 Chainlink Transporter App
-Use the message ID emitted by UsdcTransferred to monitor delivery.
+---
 
-Track gas usage, logs, and success/failure status.
+## 🔍 Track the Transfer
 
-🔎 Snowtrace
-View the Avalanche Fuji transaction hash.
+### 🔗 [Chainlink Transporter App](https://transporter.chain.link/)
 
-Monitor LINK and USDC token balances on-chain.
+- Use the message ID emitted by `UsdcTransferred` to monitor delivery.
+- Track gas usage, logs, and success/failure status.
 
-🛠 Developer Utilities
-allowanceUsdc() – View how much USDC you've approved to the contract
+### 🔎 [Snowtrace](https://testnet.snowtrace.io/)
 
-balancesOf(address) – View LINK + USDC balances
+- View the Avalanche Fuji transaction hash.
+- Monitor LINK and USDC token balances on-chain.
 
-withdrawToken(address, token) – Owner-only emergency withdrawal
+---
 
-🧠 Learn More
-Chainlink CCIP Documentation
+## 🛠 Developer Utilities
 
-Transporter UI Guide
+- `allowanceUsdc()` – View how much USDC you've approved to the contract
+- `balancesOf(address)` – View LINK + USDC balances
+- `withdrawToken(address, token)` – Owner-only emergency withdrawal
 
-Fuji LINK Faucet
+---
 
-Snowtrace
+## 🧠 Learn More
 
-🙏 Credits
+- [Chainlink CCIP Documentation](https://docs.chain.link/ccip)
+- [Transporter UI Guide](https://docs.chain.link/ccip/transporter/introduction)
+- [Fuji LINK Faucet](https://faucets.chain.link/fuji)
+- [Snowtrace](https://testnet.snowtrace.io/)
+
+---
+
+## 🙏 Credits
+
 Built as part of a cross-chain development exercise exploring real-world CCIP usage for secure token transfer workflows.
 
-📜 License
-MIT © 2025
+---
 
-yaml
-Copy
-Edit
+## 📜 License
+
+MIT © 2025
+```
 
 ---
 
@@ -124,10 +143,3 @@ Let me know if you’d like:
 - A visual flow diagram of the transfer process
 
 You're building something powerful — and this README will make it shine!
-
-
-
-
-
-
-
