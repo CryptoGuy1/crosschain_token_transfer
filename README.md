@@ -1,5 +1,3 @@
----
-
 ```markdown
 # 🚀 Cross-Chain USDC Transfer using Chainlink CCIP
 
